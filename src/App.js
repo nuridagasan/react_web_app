@@ -15,8 +15,11 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React Click Here
+          Learn React 
         </a>
+        <p>
+          TEST AMPLIFY
+        </p>
       </header>
     </div>
   );
