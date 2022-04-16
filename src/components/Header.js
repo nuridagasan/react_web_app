@@ -1,5 +1,7 @@
-import navbarLinksData from "./data/menu_links.json"
-const Header = () => {
+import React, {useState, useEffect} from 'react';
+import FetchDataFromAPI from './scripts/FetchDataFromAPI';
+const Header = () => {    
+    const menuLinksData = FetchDataFromAPI('https://dsbikr30k8.execute-api.eu-west-2.amazonaws.com/Prod/menu_links');
     return (
         <header id="intro">
             <article className="fullheight">
@@ -15,7 +17,7 @@ const Header = () => {
                     <div className="brand"><a href="#welcome">Landon <span>Hotel</span></a></div>
                     <ul>
                         {
-                           navbarLinksData.map((link) => 
+                           menuLinksData.map((link) => 
                             <li><a className={`icon ${link.class}`} href={link.href}><span>{link.text}</span></a></li>
                            )
                         }

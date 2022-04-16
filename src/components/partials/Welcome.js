@@ -1,6 +1,7 @@
-import galleryImagesData from '../data/galley_imgs.json'
+import FetchDataFromAPI from '../scripts/FetchDataFromAPI';
 
 const Welcome = () => {
+    const galleryImagesData = FetchDataFromAPI('https://dsbikr30k8.execute-api.eu-west-2.amazonaws.com/Prod/gallery_images');
     return (
         <div className="scene" id="welcome">
             <article className="content">

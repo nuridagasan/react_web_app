@@ -1,8 +1,9 @@
-import accessibilitiesData from '../data/accessibilities.json'
-import servicesData from '../data/services.json'
-
+import FetchDataFromAPI from '../scripts/FetchDataFromAPI';
 
 const HotelInfo = () => {
+    const accessibilitiesData = FetchDataFromAPI('https://dsbikr30k8.execute-api.eu-west-2.amazonaws.com/Prod/accessibilities')
+    const servicesData = FetchDataFromAPI('https://dsbikr30k8.execute-api.eu-west-2.amazonaws.com/Prod/services')
+
     return (
         <div className="scene" id="hotelinfo">
             <article className="heading">
